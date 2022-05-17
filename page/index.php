@@ -16,7 +16,7 @@
     <nav class=one>
         <div>
 
-            <img src="../image/file.png" alt="">
+            <a href="./index.php"><img src="../image/file.png" alt=""> </a>
         </div>
         <span class="one1">
             <div class="">
@@ -68,8 +68,8 @@
         
         <div>
             <button type="button" class="btn btn-outline-success col-2"> <a
-                    href="./inscrip.html">S'inscrire</a></button>
-            <button type="button" class="btn btn-outline-warning col-2"> <a href="./auth.html">Se connecter </a></button>
+                    href="./inscrip.php">S'inscrire</a></button>
+            <button type="button" class="btn btn-outline-warning col-2"> <a href="./auth.php">Se connecter </a></button>
         </div>
     </center>
     </section>
@@ -86,7 +86,7 @@
             <div>
                 <ul>
                     <li>
-                        <h2>UFS/SDS</h2>
+                        <h2>UFR/SDS</h2>
                     </li>
                     <li>Science de la santé</li>
                 </ul>

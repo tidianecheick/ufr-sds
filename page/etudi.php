@@ -1,3 +1,11 @@
+<?php
+$bdd = new mysqli('localhost', 'root', '', 'ufr_sds');
+$query = "SELECT * FROM `users` ORDER BY `nom` DESC";
+$solution = mysqli_query($bdd,$query)
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,7 +22,7 @@
     <nav class=one>
         <div>
             
-            <img src="../image/file.png" alt="">
+            <a href="./index.html"><img src="../image/file.png" alt=""></a>
         </div>
         <span class="one1">
             <div class="" >
@@ -32,35 +40,41 @@
 </div> <br>
 <h2>Information de l'etudiant</h2>
 
+
+
 <section class="back" >
-<form action="/action_page.php" class=" col-md-6 ">
-    <label for="fname">Nom</label>
-    <input type="text" id="fname" name="firstname" placeholder="Votre nom..">
+<form action="action/enreg_etud.php" method="post" class=" col-md-6 ">
+    <label for="fname">nom</label>
+    <input type="text" id="fname" name="nom" placeholder="Votre nom..">
   
-    <label for="lname">Prenom</label>
-    <input type="text" id="lname" name="lastname" placeholder="Votre prenom..">
+    <label for="lname">prenom</label>
+    <input type="text" id="lname" name="prenom" placeholder="Votre prenom..">
 
     <label for="lname">date de naissance</label>
-    <input type="text" id="lname" name="lastname" placeholder="Votre date de naissance..">
+    <input type="text" id="lname" name="date_de_naissance" placeholder="Votre date de naissance..">
 
-    <label for="lname">Email</label>
-    <input type="text" id="lname" name="lastname" placeholder="Votre email..">
+    <label for="lname">email</label>
+    <input type="text" id="lname" name="email" placeholder="Votre email..">
 
-    <label for="lname">Telephone</label>
-    <input type="text" id="lname" name="lastname" placeholder="Votre tel..">
+    <label for="lname">telephone</label>
+    <input type="text" id="lname" name="telephone"   placeholder="Votre tel..">
 
-    <label for="tuteur">Tuteur</label>
+    <label for="tuteur">tuteur</label>
     <select id="tuteur" name="tuteur">
-      <option value="australia">tuteur1</option>
-      <option value="canada">tuteur2</option>
-      <option value="usa">tuteur3</option>
+
+     <?php
+     while($lign=mysqli_fetch_assoc($solution)){
+         echo "<option value ='$lign[nom]'>$lign[nom] $lign[prenom] </option>";
+     }
+     ?>
+
     </select>
 
     <center class="four">
         <div >
-        <button type="button" class="btn btn-outline-success col-3">Enregistre</button>
-        <button type="button" class="btn btn-outline-warning col-3">Liste</button> <br><br>
-        <button type="button" class="btn btn-outline-danger col-2">Ajouter</button>
+        <button type="submit" name="enregistre" class="btn btn-outline-success col-3">Enregistre </button>
+        <button type="button" class="btn btn-outline-warning col-3"><a href="list .php">Liste</a></button> <br><br>
+        <button type="button" class="btn btn-outline-danger col-2"> <a href="tuteur.php">Ajouter </a></button>
         
         </div>
         </center>
@@ -93,18 +107,6 @@
 </div>
 </div>
 </footer>
-
-    
-    
-
-
-
-
-
-
-
-
-
 
     
     <script src="../page/bootstrap.bundle.min.js"></script>

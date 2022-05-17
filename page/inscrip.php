@@ -1,3 +1,8 @@
+<?php
+include("./action/signupAction.php");
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,7 +18,7 @@
     <nav class=one>
         <div>
             
-            <img src="../image/file.png" alt="">
+            <a href="./index.php"> <img src="../image/file.png" alt=""> </a>
         </div>
         <span class="one1">
             <div class="" >
@@ -32,29 +37,29 @@
 <h2>Veillez vous inscrire</h2>
 
 <section class="back" >
-<form action="/action_page.php" class=" col-md-6 ">
+<form action="" method="post" class=" col-md-6 ">
+    
     <label for="fname">Nom</label>
-    <input type="text" id="fname" name="firstname" placeholder="Votre nom..">
+    <input type="text" id="fname" name="nom" placeholder="Votre nom..">
   
     <label for="lname">Prenom</label>
-    <input type="text" id="lname" name="lastname" placeholder="Votre prenom..">
+    <input type="text" id="lname" name="prenom" placeholder="Votre prenom..">
 
     <label for="lname">Email</label>
-    <input type="text" id="lname" name="lastname" placeholder="Votre email..">
+    <input type="text" id="lname" name="email" placeholder="Votre email..">
 
-    <label for="lname">Telephone</label>
-    <input type="text" id="lname" name="lastname" placeholder="Votre telephone..">
+
 
     <label for="lname">Mot de passe</label>
-    <input type="text" id="lname" name="lastname" placeholder="Votre mdp..">
+    <input type="password" id="lname" name="mdp" placeholder="Votre mdp..">
 
-    <label for="lname">Confirmez mot de passe</label>
-    <input type="text" id="lname" name="lastname" placeholder="Votre mdp..">
-
+  
+    
+       <?php if(isset($errorMsg)){echo '<p style="font-size:20px; color:red">'.$errorMsg.'</p>';} ?>
     <center class="four">
         <div >
-        <button type="button" class="btn btn-outline-success col-2">S'inscrire</button>
-        <button type="button" class="btn btn-outline-warning col-3">Se Connecter</button> 
+        <button type="submit" class="btn btn-outline-success col-2" name="inscrip">S'inscrire  </button>
+        <button type="submit" class="btn btn-outline-warning col-3"> <a href="auth.php">Se Connecter </a></button> 
         </div>
         </center>
    

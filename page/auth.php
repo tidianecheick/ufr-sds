@@ -1,3 +1,10 @@
+
+<?php
+include("./action/LoginAction.php");
+
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,7 +20,7 @@
     <nav class=one>
         <div>
             
-            <img src="../image/file.png" alt="">
+            <a href="./index.php"> <img src="../image/file.png" alt=""></a>
         </div>
         <span class="one1">
             <div class="" >
@@ -34,19 +41,21 @@
 
 <section class="back" >
 
-<form action="action_page.php" method="post" class="col-md-4">
+<form action="" method="post" class="col-md-4">
     <div class="imgcontainer">
-      <img src="../image/3boys.jpg" alt="Avatar" class="avatar" >
+      <img src="../image/homme-serieux.jpg" alt="Avatar" class="avatar" >
     </div>
   
     <div class="container">
       <label for="uname"><b>Email</b></label>
-      <input type="text" placeholder="Enter email" name="uname" required>
+      <input type="text" placeholder="Enter email" name="email" required>
   
       <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required>
+      <input type="password" placeholder="Enter Password" name="mdp" required>
+      <?php if(isset($errorMsg)){echo '<p style="font-size:20px; color:red">'.$errorMsg.'</p>';} ?>
+
   
-      <button type="submit">Envoyer</button>
+      <button type="submit" name="send"><a href="">Envoyer </a></button>
     
     </div>
   
@@ -65,7 +74,7 @@
 </div>
 <div>
 <ul>
-    <li><h2>UFS/SDS</h2></li>
+    <li><h2>UFR/SDS</h2></li>
     <li>Science de la santé</li>
 </ul>
 </div>

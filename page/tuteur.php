@@ -1,3 +1,10 @@
+<?php
+include("./action/enreg_tu.php");
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,7 +20,7 @@
     <nav class=one>
         <div>
             
-            <img src="../image/file.png" alt="">
+            <a href="./index.php"> <img src="../image/file.png" alt=""></a>
         </div>
         <span class="one1">
             <div class="" >
@@ -30,28 +37,29 @@
     <h2 class="tow1">BIENVENUE SUR NOTRE PLATFORME</h2>
     
 </div> <br>
+<a href="./action/Logout.php">deconnecter</a>
 <h2>Renseignement du tuteur</h2>
 
 
 <section class="back" >
 
-<form action="action_page.php" method="post" class="col-md-4">
+<form action="" method="post" class="col-md-4">
     <div class="imgcontainer">
-      <img src="../image/3boys.jpg" alt="Avatar" class="avatar" >
+      <img src="../image/homme-serieux.jpg" alt="Avatar" class="avatar" >
     </div>
   
     <div class="container">
-      <label for="uname"><b>Nom</b></label>
-      <input type="text" placeholder="Enter nom" name="uname" required>
+      <label for="uname"><b>nom</b></label>
+      <input type="text" placeholder="Enter nom" name="nom" required>
 
-      <label for="uname"><b>Prenom</b></label>
-      <input type="text" placeholder="Enter prenom" name="uname" required>
+      <label for="uname"><b>prenom</b></label>
+      <input type="text" placeholder="Enter prenom" name="prenom" required>
 
-      <label for="uname"><b>Telephone</b></label>
-      <input type="text" placeholder="Entre votre tel" name="uname" required>
+      <label for="uname"><b>telephone</b></label>
+      <input type="text" placeholder="Entre votre tel" name="telephone" required>
   
   
-      <button type="submit">Envoyer</button>
+      <button type="submit" name="envoyer">Envoyer</button>
     
     </div>
   
@@ -70,7 +78,7 @@
 </div>
 <div>
 <ul>
-    <li><h2>UFS/SDS</h2></li>
+    <li><h2>UFR/SDS</h2></li>
     <li>Science de la santé</li>
 </ul>
 </div>
